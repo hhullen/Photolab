@@ -195,14 +195,17 @@ constexpr CStr kColorSelector{"QWidget:hover {"
 constexpr CStr kKernelCell{"QWidget:hover {"
                            "background-color: rgb(100, 100, 100);"
                            "border: 1px solid rgb(150, 120, 170);"
+                           "color: rgb(255, 255, 255);"
                            "}"
                            "QWidget {"
                            "background-color: rgb(30, 30, 30);"
                            "border: 1px solid rgb(150, 120, 170);"
+                           "color: rgb(255, 255, 255);"
                            "}"
                            "QWidget:disabled {"
                            "background-color: rgb(20, 20, 20);"
                            "border: 1px solid rgb(70, 0, 90);"
+                           "color: rgb(255, 255, 255);"
                            "}"};
 } // namespace Style
 
