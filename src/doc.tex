@@ -1,0 +1,44 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{amsmath, amssymb}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\title{Photolab v1.0}
+\author{Hoshi Hullen}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\tableofcontents
+\newpage
+
+\section{Description}
+
+The Photolab project is to make some filter on .bmp, .jpg, .png images.
+There are few simple filters, color corrections, and kernel filters based on some predefined kernels as well as ability to apply custom one. App let user to load some images as well as use preloaded images can be find in 'File' menu. Edited images can be saved in chosen by user folder.
+
+App developed with QtWidgets/C++20.
+
+\section{Make commands}
+
+\begin{itemize}
+    \item \texttt{make install} build app into build/release/ with necessary libs.
+    \item \texttt{make run} run app after it have been installed.
+    \item \texttt{make uninstall} just remove build directory
+    \item \texttt{make dist} after app have been installed creates a Photolab directory in project root, and place an app and necessary libs.
+    \item \texttt{make tests} clone Gtest repository, build into test_build directory and run tests
+    \item \texttt{make clean} remove build, Gtest, Photolab, test_build directories
+\end{itemize}
+
+\section{Link}
+
+GitHub: \url{https://github.com/hhullen/Photolab}
+
+\end{document}
