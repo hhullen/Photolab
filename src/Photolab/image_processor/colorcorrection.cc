@@ -16,9 +16,9 @@ bool ColorCorrection::MakeSimpleColorCorrection(ConstPixBytes prevPixels,
     auto [newBlue, newGreen, newRed] =
         Support::GetPixChannsBGR(&lastPixels.getData()[i]);
 
-    const uchar b = std::clamp<uchar>(oldBlue + brightness, 0, 255);
-    const uchar g = std::clamp<uchar>(oldGreen + brightness, 0, 255);
-    const uchar r = std::clamp<uchar>(oldRed + brightness, 0, 255);
+    const uchar b = std::clamp(oldBlue + brightness, 0, 255);
+    const uchar g = std::clamp(oldGreen + brightness, 0, 255);
+    const uchar r = std::clamp(oldRed + brightness, 0, 255);
 
     newBlue = std::clamp(
         static_cast<int>(((b - 128) * contrast) / kContrastScale + 128), 0,
