@@ -1,0 +1,7 @@
+module Photolab
+typeinfo appPhotolab.qmltypes
+prefer :/qt/qml/Photolab/
+Main 1.0 gui/Main.qml
+Common 1.0 gui/Constant/Common.qml
+TileEffect 1.0 gui/TileEffect.qml
+

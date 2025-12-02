@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="/shaders">
+    <file alias="Tile.frag.qsb">C:/PROJECTS/Photolab/src/Photolab/build/Desktop-Debug/.qsb/Tile.frag.qsb</file>
+  </qresource>
+</RCC>
+

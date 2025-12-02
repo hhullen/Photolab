@@ -1,0 +1,9 @@
+<RCC>
+  <qresource prefix="/qt/qml/Photolab/">
+    <file alias="gui/Main.qml">C:/PROJECTS/Photolab/src/Photolab/gui/Main.qml</file>
+    <file alias="gui/Constant/qmldir">C:/PROJECTS/Photolab/src/Photolab/gui/Constant/qmldir</file>
+    <file alias="gui/Constant/Common.qml">C:/PROJECTS/Photolab/src/Photolab/gui/Constant/Common.qml</file>
+    <file alias="gui/TileEffect.qml">C:/PROJECTS/Photolab/src/Photolab/gui/TileEffect.qml</file>
+  </qresource>
+</RCC>
+

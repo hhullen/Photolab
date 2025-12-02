@@ -1,0 +1,17 @@
+-rootPath
+C:/PROJECTS/Photolab/src/Photolab
+-cmake-output
+-output-file
+C:/PROJECTS/Photolab/src/Photolab/build/Desktop-Debug/.qt/qml_imports/appPhotolab_build.cmake
+-importPath
+C:/PROJECTS/Photolab/src/Photolab/build/Desktop-Debug/Photolab
+-importPath
+C:/PROJECTS/Photolab/src/Photolab/build/Desktop-Debug
+-importPath
+C:/mnt/Qt/6.9.1/mingw_64/qml
+-qrcFiles
+C:/PROJECTS/Photolab/src/Photolab/build/Desktop-Debug/.qt/rcc/qmake_Photolab.qrc
+C:/PROJECTS/Photolab/src/Photolab/build/Desktop-Debug/.qt/rcc/appPhotolab_raw_qml_0.qrc
+C:/PROJECTS/Photolab/src/Photolab/build/Desktop-Debug/.qt/rcc/appPhotolab_raw_qml_0_extra_qmldirs.qrc
+C:/PROJECTS/Photolab/src/Photolab/build/Desktop-Debug/.qt/rcc/appPhotolab.qrc
+C:/PROJECTS/Photolab/src/Photolab/build/Desktop-Debug/.qt/rcc/appPhotolab_shaders.qrc

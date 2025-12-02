@@ -1,0 +1,3 @@
+set(__QT_DEPLOY_TARGET_appPhotolab_FILE C:/PROJECTS/Photolab/src/Photolab/build/Desktop-Debug/appPhotolab.exe)
+set(__QT_DEPLOY_TARGET_appPhotolab_TYPE EXECUTABLE)
+set(__QT_DEPLOY_TARGET_appPhotolab_RUNTIME_DLLS C:/mnt/Qt/6.9.1/mingw_64/bin/Qt6QuickControls2.dll;C:/mnt/Qt/6.9.1/mingw_64/bin/Qt6QuickTemplates2.dll;C:/mnt/Qt/6.9.1/mingw_64/bin/Qt6Quick.dll;C:/mnt/Qt/6.9.1/mingw_64/bin/Qt6QmlMeta.dll;C:/mnt/Qt/6.9.1/mingw_64/bin/Qt6QmlWorkerScript.dll;C:/mnt/Qt/6.9.1/mingw_64/bin/Qt6OpenGL.dll;C:/mnt/Qt/6.9.1/mingw_64/bin/Qt6Gui.dll;C:/mnt/Qt/6.9.1/mingw_64/bin/Qt6QmlModels.dll;C:/mnt/Qt/6.9.1/mingw_64/bin/Qt6Qml.dll;C:/mnt/Qt/6.9.1/mingw_64/bin/Qt6Network.dll;C:/mnt/Qt/6.9.1/mingw_64/bin/Qt6Core.dll)
