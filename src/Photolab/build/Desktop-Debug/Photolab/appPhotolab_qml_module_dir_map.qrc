@@ -1,6 +1,0 @@
-<RCC>
-  <qresource prefix="/">
-    <file alias="/qt/qml/Photolab">C:/PROJECTS/Photolab/src/Photolab/build/Desktop-Debug/Photolab</file>
-
-  </qresource>
-</RCC>

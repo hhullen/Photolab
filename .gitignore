@@ -54,7 +54,7 @@ dkms.conf
 #others
 *.DS_store
 *build-Photolab*
-/src/Photolab/build/
+./src/Photolab/build/
 build
 gtest
 test_build

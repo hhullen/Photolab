@@ -10,8 +10,11 @@ find_package(Qt6 REQUIRED COMPONENTS Quick QuickControls2)
 
 qt_standard_project_setup(REQUIRES 6.8)
 
+set(CMAKE_AUTORCC ON)
+
 qt_add_executable(appPhotolab
     main.cpp
+    resources.qrc
 )
 
 qt_add_qml_module(appPhotolab
@@ -19,17 +22,18 @@ qt_add_qml_module(appPhotolab
     VERSION 1.0
     QML_FILES
         gui/Main.qml
+        gui/ViewSpace.qml
+        gui/MenuBar.qml
+
         gui/Constant/qmldir
         gui/Constant/Common.qml
-        gui/TileEffect.qml
-)
+        gui/Constant/ViewSpaceC.qml
+        gui/Constant/EffectsC.qml
 
-qt6_add_resources(appPhotolab "appPhotolab"
-    PREFIX
-        "/"
-    FILES
-        resources.qrc
-
+        gui/Effects/qmldir
+        gui/Effects/Tile.qml
+        gui/Effects/Blur.qml
+        gui/Effects/Radius.qml
 )
 
 qt6_add_shaders(appPhotolab "appPhotolab_shaders"
@@ -37,6 +41,8 @@ qt6_add_shaders(appPhotolab "appPhotolab_shaders"
     BASE "gui/Shaders"
     FILES
         gui/Shaders/Tile.frag
+        gui/Shaders/Blur.frag
+        gui/Shaders/Radius.frag
 )
 
 list(APPEND QML_DIRS ${CMAKE_SOURCE_DIR})

@@ -2,9 +2,17 @@
 #include <QQmlApplicationEngine>
 #include <QStyleHints>
 #include <QPalette>
+#include <QDirIterator>
 
-int main(int argc, char *argv[])
-{
+#include <QDebug>
+#include <QFile>
+
+int main(int argc, char *argv[]) {
+
+    // QDirIterator it(":", QDirIterator::Subdirectories);
+    // while (it.hasNext()) {
+    //     qDebug() << it.next();
+    // }
 
     QGuiApplication app(argc, argv);
     QGuiApplication::setPalette(QGuiApplication::palette());

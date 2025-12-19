@@ -1,6 +1,7 @@
 import QtQuick 2.15 as Core
+
 import "Constant" as Const
-import QtQuick.Controls as Controls
+import "Effects" as Effects
 
 Core.Window {
     id: mainWindow
@@ -10,13 +11,36 @@ Core.Window {
     minimumHeight: Const.Common.minHeight
     visible: true
     color: mainWindow.palette.window
-    title: qsTr("Hello World")
+    title: qsTr(Const.Common.appName)
+
+    MenuBar{
+        id: menuBar
+    }
+
+    ViewSpace {
+        id: viewSpace
+        // Core.Image {
+        //     source: "qrc:/photos/resources/Night_City.jpg"
+
+        // }
+    }
+
+    Effects.Radius{
+        backgroundSource: viewSpace
+    }
 
     Core.Rectangle {
-        anchors.fill: parent
-        anchors.margins: 5
+        id: blurRect
+        anchors.centerIn: viewSpace
         color: "transparent"
+        width: 300
+        height: 300
 
-        TileEffect {}
+        Effects.Blur{
+            backgroundSource: viewSpace
+        }
+    }
+    Effects.Radius{
+        backgroundSource: blurRect
     }
 }

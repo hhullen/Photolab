@@ -1,7 +1,0 @@
-<RCC>
-  <qresource prefix="/qt/qml/Photolab/">
-    <file alias="gui/qmldir">C:/PROJECTS/Photolab/src/Photolab/build/Desktop-Debug/Photolab/gui/qmldir</file>
-    <file alias="gui/Constant/qmldir">C:/PROJECTS/Photolab/src/Photolab/build/Desktop-Debug/Photolab/gui/Constant/qmldir</file>
-  </qresource>
-</RCC>
-

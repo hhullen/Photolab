@@ -2,4 +2,30 @@
     <qresource prefix="/shaders">
         <file>gui/Shaders/Tile.frag</file>
     </qresource>
+    <qresource prefix="/photos">
+        <file>resources/kukoyaka.png</file>
+        <file>resources/winx.jpg</file>
+        <file>resources/Cyberpunk_2077.jpg</file>
+        <file>resources/Johnny_Silverhand.jpg</file>
+        <file>resources/Night_City.jpg</file>
+    </qresource>
+    <qresource prefix="/htmls">
+        <file>resources/controls_help.html</file>
+    </qresource>
+    <qresource prefix="/icons">
+        <file>resources/mac_icon.icns</file>
+        <file>resources/win_icon.ico</file>
+        <file>resources/save.png</file>
+        <file>resources/color_correction.png</file>
+        <file>resources/help.png</file>
+        <file>resources/kernel_filter.png</file>
+        <file>resources/picture.png</file>
+        <file>resources/reset.png</file>
+        <file>resources/simple_filter.png</file>
+        <file>resources/undo.png</file>
+        <file>resources/load.png</file>
+    </qresource>
+    <qresource prefix="/new">
+        <file>resources/load.png</file>
+    </qresource>
 </RCC>
