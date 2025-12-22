@@ -5,11 +5,18 @@ import "Effects" as Effects
 Core.Rectangle {
     id: viewSpace
     anchors.fill: parent
-    anchors.topMargin: menuBar.height
+    property var topElement: null
+
+    anchors.topMargin: topElement.height
     anchors.margins: 5
     color: "transparent"
     clip: true
 
+    Core.Rectangle {
+        id: background
+        anchors.fill: viewSpace
+        Effects.Tile {}
+    }
 
-    Effects.Tile {}
+    property var background: background
 }

@@ -24,6 +24,8 @@ qt_add_qml_module(appPhotolab
         gui/Main.qml
         gui/ViewSpace.qml
         gui/MenuBar.qml
+        gui/PicturePlane.qml
+        gui/PictureHint.qml
 
         gui/Constant/qmldir
         gui/Constant/Common.qml
