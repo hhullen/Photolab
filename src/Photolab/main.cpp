@@ -2,6 +2,12 @@
 #include <QQmlApplicationEngine>
 #include <QStyleHints>
 #include <QPalette>
+#include <QQmlEngine>
+#include <QJSEngine>
+
+#include "backend/backend.h"
+#include "controller/controller.h"
+#include "gui/pictureplane_item.h"
 
 int main(int argc, char *argv[]) {
     QGuiApplication app(argc, argv);
@@ -11,6 +17,8 @@ int main(int argc, char *argv[]) {
         QGuiApplication::setPalette(QGuiApplication::palette());
     });
 
+    Backend &back = Backend::Get();
+    Controller::Get().setBackend(&back);
 
     QQmlApplicationEngine engine;
 

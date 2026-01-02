@@ -1,21 +1,35 @@
-cmake_minimum_required(VERSION 3.16)
+cmake_minimum_required(VERSION 3.20)
 
-project(Photolab VERSION 0.1 LANGUAGES CXX)
+project(Photolab VERSION 2.0 LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-find_package(Qt6 REQUIRED COMPONENTS Quick)
-find_package(Qt6 COMPONENTS Quick ShaderTools REQUIRED)
-find_package(Qt6 REQUIRED COMPONENTS Quick QuickControls2)
+find_package(Qt6 REQUIRED COMPONENTS Core Qml Quick ShaderTools GuiPrivate)
 
-qt_standard_project_setup(REQUIRES 6.8)
+qt_standard_project_setup(REQUIRES 6.5)
 
+set(QT_QML_GENERATE_QMLLS_INI ON)
 set(CMAKE_AUTORCC ON)
 
 qt_add_executable(appPhotolab
     main.cpp
     resources.qrc
+
+    controller/controller.h
+    controller/controller.cc
+    controller/backend_interface.h
+
+    backend/backend.h
+    backend/backend.cc
 )
+
+add_subdirectory(gui/Constant)
+target_link_libraries(appPhotolab PRIVATE ConstantLibplugin)
+
+add_subdirectory(gui/Effects)
+target_link_libraries(appPhotolab PRIVATE EffectsLibplugin)
+
+target_include_directories(appPhotolab PRIVATE gui)
 
 qt_add_qml_module(appPhotolab
     URI Photolab
@@ -27,15 +41,12 @@ qt_add_qml_module(appPhotolab
         gui/PicturePlane.qml
         gui/PictureHint.qml
 
-        gui/Constant/qmldir
-        gui/Constant/Common.qml
-        gui/Constant/ViewSpaceC.qml
-        gui/Constant/EffectsC.qml
-
-        gui/Effects/qmldir
-        gui/Effects/Tile.qml
-        gui/Effects/Blur.qml
-        gui/Effects/Radius.qml
+    SOURCES
+        gui/picture_render.h
+        gui/picture_render.cc
+        gui/pictureplane_item.h
+        # RESOURCES gui/Constant/CMakeLists.txt
+        # RESOURCES gui/Effects/CMakeLists.txt
 )
 
 qt6_add_shaders(appPhotolab "appPhotolab_shaders"
@@ -45,6 +56,9 @@ qt6_add_shaders(appPhotolab "appPhotolab_shaders"
         gui/Shaders/Tile.frag
         gui/Shaders/Blur.frag
         gui/Shaders/Radius.frag
+
+        gui/Shaders/PictureRender.vert
+        gui/Shaders/PictureRender.frag
 )
 
 list(APPEND QML_DIRS ${CMAKE_SOURCE_DIR})
@@ -63,7 +77,7 @@ set_target_properties(appPhotolab PROPERTIES
 
 target_link_libraries(appPhotolab PRIVATE
     Qt6::Quick
-    Qt::QuickControls2
+    Qt6::GuiPrivate
 )
 
 include(GNUInstallDirs)

@@ -1,6 +1,6 @@
 import QtQuick 2.15 as Core
-import "Constant" as Const
-import "Effects" as Effects
+import Constant as Const
+import Effects as Effects
 
 Core.Rectangle {
     id: viewSpace

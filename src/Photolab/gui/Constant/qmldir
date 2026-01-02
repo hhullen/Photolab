@@ -1,4 +1,0 @@
-module Constant
-singleton Common 1.0 Common.qml
-singleton ViewSpaceC 1.0 ViewSpaceC.qml
-singleton EffectsC 1.0 EffectsC.qml
