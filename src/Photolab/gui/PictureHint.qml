@@ -17,7 +17,6 @@ Core.Rectangle {
 
     Effects.Blur{
         backgroundSource: containerBackground
-
     }
 
     Core.Text {

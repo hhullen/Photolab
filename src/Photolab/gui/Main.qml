@@ -35,6 +35,17 @@ Core.Window {
             backgroundSource: pictureHintBackground
             radius: Const.ViewSpaceC.pictureHintRadius
         }
+
+        CutterSlider {
+            id: cutterSlider
+            containerBackground: viewSpace.background
+            object: picturePlane
+        }
+
+        Effects.Radius {
+            backgroundSource: cutterSlider
+            radius: Const.ViewSpaceC.cutterSliderRadius
+        }
     }
 
     Effects.Radius {

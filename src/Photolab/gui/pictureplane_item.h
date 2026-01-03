@@ -22,6 +22,7 @@ public:
     void setCutter(float value) {
         renderer_.get()->setCutter(value);
         emit cutterChanged(value);
+        update();
     }
 
 signals:

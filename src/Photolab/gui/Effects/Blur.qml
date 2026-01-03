@@ -9,8 +9,7 @@ Core.ShaderEffect {
     property var backgroundSource: null
     property real blurRadius: Const.EffectsC.blurRadius
     property bool isHorizontal: false
-    property real brightness: Const.EffectsC.blurBrightness
-
+    property rect toneColor: Const.EffectsC.blurTone
 
     property variant src: Core.ShaderEffectSource {
         sourceItem: horizontalPass
@@ -32,7 +31,7 @@ Core.ShaderEffect {
         property var backgroundSource: rootEffect.backgroundSource
         property real blurRadius: rootEffect.blurRadius
         property bool isHorizontal: true
-        property real brightness: rootEffect.brightness
+        property rect toneColor: Qt.rect(1.0, 1.0, 1.0, 1.0)
 
         property variant src: Core.ShaderEffectSource {
             sourceItem: horizontalPass.backgroundSource

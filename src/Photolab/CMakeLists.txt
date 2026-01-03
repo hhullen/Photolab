@@ -45,6 +45,7 @@ qt_add_qml_module(appPhotolab
         gui/picture_render.h
         gui/picture_render.cc
         gui/pictureplane_item.h
+        QML_FILES gui/CutterSlider.qml
         # RESOURCES gui/Constant/CMakeLists.txt
         # RESOURCES gui/Effects/CMakeLists.txt
 )

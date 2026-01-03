@@ -13,18 +13,19 @@ Core.Rectangle {
     x: (parent.width - width) / 2
     y: (parent.height - height) / 2
 
-    // Core.Image {
-    //     id: img
-    //     anchors.fill: picturePlane
-    //     source: "qrc:/photos/resources/Night_City.jpg"
-    // }
+    property real cutter: 0.5
+
+    onCutterChanged: {
+        picturePlaneItem.cutter = picturePlane.cutter
+    }
 
     App.PicturePlaneItem {
+        id: picturePlaneItem
         anchors.fill: picturePlane
     }
 
     Core.DragHandler {
-        acceptedButtons: Qt.RightButton
+        acceptedButtons: Qt.LeftButton
         target: picturePlane
     }
 

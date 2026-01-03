@@ -8,8 +8,10 @@ QtObject {
     readonly property int borderRradius: 40
 
     readonly property color pictureHintColor: Qt.rgba(255, 255, 255, 1.0)
-    readonly property int pictureHintSize: 32
-    readonly property int pictureHintRadius: 17
+    readonly property int pictureHintSize: 30
+    readonly property int pictureHintRadius: 15
+
+    readonly property int cutterSliderRadius: 17
 
     readonly property real scaleStep: 1.1
     readonly property real scaleMax: 20
